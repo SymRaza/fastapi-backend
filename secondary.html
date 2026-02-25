@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-</head>
+<html>
 <body>
-    <h1>
-        Welcome to page 2
-    </h1>
-    <p>
-        This is the other page
-    </p>
+    <h1>Welcome!</h1>
+    <p id="greeting">Loading greeting...</p>
+    <p id="age"></p>
+
+    <script>
+        // This script looks at the URL (e.g., ?name=Sayem) and picks out the name
+        const params = new URLSearchParams(window.location.search);
+        const userName = params.get('name');
+        const userAge = params.get('age');
+        
+        if (userName&&userAge) {
+            document.getElementById('greeting').innerText = "Hello, " + userName + "!";
+            document.getElementById('age').innerText = "User age: " + userAge;
+        }
+    </script>
     
-    <a href="/">
-        <button>Previous Page</button>
-    </a>
+    <a href="/">Go Back</a>
 </body>
 </html>
