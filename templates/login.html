@@ -1,0 +1,25 @@
+{% extends "homepage.html" %}
+{% block content %}
+    
+    <div id="welcome-message">
+        <h1>CAMPUS PORTAL</h1>
+    </div>
+
+    <div id="main-container">
+        <div id="title">
+            <h1>
+                Login
+            </h1>
+        </div>
+        <form action="/submit-item" method="post">
+            <h2>Full Name</h2>
+            <input type="text" name="my_name" placeholder="e.g. Sayem Raza" required>
+
+            <h2>Age</h2>
+            <input type="number" name="my_age" placeholder="Age" required>
+
+            <button type="submit" id="submit-button">Sign In</button>
+        </form>
+    </div>
+
+{% endblock %}

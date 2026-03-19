@@ -9,7 +9,7 @@ templates = Jinja2Templates(directory="templates")
 
 @app.get("/")
 async def load_home(request: Request):
-    return templates.TemplateResponse("homepage.html", {"request": request})
+    return templates.TemplateResponse("login.html", {"request": request})
 
 @app.post("/submit-item")
 async def handle_form(my_name:str = Form(...),my_age:str = Form(...)):
